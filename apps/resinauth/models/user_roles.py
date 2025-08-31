@@ -5,9 +5,11 @@ from apps.resinauth.models.user import User
 
 
 class UserRole(models.Model):
+    id = models.AutoField(primary_key=True)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата назначения')
+
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     role = models.ForeignKey(Role, on_delete=models.CASCADE, verbose_name='Роль')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата назначения')
 
     class Meta:
         verbose_name = 'Роль пользователя'

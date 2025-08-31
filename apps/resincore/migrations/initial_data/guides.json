@@ -1,0 +1,25 @@
+[
+  {
+    "model": "apps.resincore.guide",
+    "fields": {
+      "label": "Состояние",
+      "code": "state"
+    }
+  },
+  {
+    "model": "apps.resincore.guideitem",
+    "fields": {
+      "label": "Создан",
+      "code": "created",
+      "guide": ["state"]
+    }
+  },
+  {
+    "model": "apps.resincore.guideitem",
+    "fields": {
+      "label": "Удален",
+      "code": "deleted",
+      "guide": ["state"]
+    }
+  }
+]
